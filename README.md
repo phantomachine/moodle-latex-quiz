@@ -1,6 +1,6 @@
 # ``moodle`` LaTeX class
 
-This uses the ``Moodle`` package in CTAN to easily edit and generate Moodle quizzes and essays.
+This uses the [Moodle package in CTAN](https://ctan.org/pkg/moodle) to easily edit and generate Moodle quizzes and essays.
 
 ## Purpose (target outputs)
 
