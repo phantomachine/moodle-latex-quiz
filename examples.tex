@@ -1,0 +1,167 @@
+% !TEX program=xelatex
+% !TEX options = --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+
+\documentclass{article}
+\usepackage{moodle}
+%\usepackage[draft]{moodle}
+\usepackage{minted}
+\usepackage{python}
+
+\begin{document}
+
+\begin{quiz}{LaTeX-Moodle Quiz}
+
+    %% MULTI environment ===============================================
+    \begin{multi}[single]{Old-skool MCQ}
+        Time is finite and indexed by $t \in \{0, 1, ...,T\}$. %
+        Let the optimal value of a policy maker beginning with %
+        resources $k_{0}$ be given by:
+        $V_{0}(k_{0}) = %
+        \max_{\{c_{t}, k_{t+1}\}_{t=0}^{T}}%
+        \sum_{t=0}^{T}\beta^{t} (c_{t})^{\alpha}$ %
+        subject to the constraints: %
+        $k_{t+1} = \min\{k_{t},1\} - c_{t}$, %
+        $0 \leq c_{t} \leq \min\{k_{t},1\}$, %
+        and, $k_{T+1} \geq 0$, %
+        where $\alpha \in (0,1)$; and $k=K/L$ and $c$, respectively, %
+        refer to per-worker capital stock and consumption. %
+        The state space $X \ni k_{t}$ is bounded.
+        \\
+        Describe precisely what we mean by a strategy in this setting. 
+		\item* A strategy is a date and state contingent plan %
+        $\{g_{t}(k_{t})\}_{t=0}^{T}$ such that %
+        $c_{t} = g_{t}(k_{t})$ at each date $t$ and state $k_{t}$.
+		\item A strategy is an optimal date and state contingent plan %
+        $\{g_{t}(k_{t})\}_{t=0}^{T}$ such that %
+        $c_{t} = g_{t}(k_{t})$ at each date $t$ and state $k_{t}$.
+		\item A strategy is the optimal date and state contingent plan %
+        $\{g_{t}(k_{t})\}_{t=0}^{T}$ such that $c_{t} = g_{t}(k_{t})$ %
+        at each date $t$ and state $k_{t}$.
+		\item A strategy is a policy selection $c_{t} = g_{t}(k_{t})$ %
+        at each date $t$ and state $k_{t}$.
+    \end{multi}
+    %% =================================================================
+
+    %% NUMERICAL environment ===========================================
+    \begin{numerical}[tolerance=0.01]{Numerical}
+        The approximate the value of $\sqrt{2}$ is
+        \item[tolerance={0.01}] 1.4142
+        \item[fraction=20, feedback={Yikes! Double!}] 0.70711
+        \item[fraction=0, feedback={Wrong!}] *
+        \item[fraction=0, feedback={Wrong!}] 2.5
+    \end{numerical}
+    %% =================================================================
+
+    
+    %% CLOZE environment ===============================================
+    \begin{cloze}{A Cloze type question}
+        Thanks to calculus, invented by Isaac
+        \begin{shortanswer}[usecase]
+            \item Newton
+        \end{shortanswer},
+        we know that the indefinite integral of $x^2$ is
+        \begin{multi}[horizontal]
+            \item This one $2x$
+            \item* This one $3x$
+            \item This one $0$
+        \end{multi}
+        and that $\int_0^2 x^2 dx$ equals
+        \begin{numerical}
+            \item[tolerance={0.001}] 2.667
+        \end{numerical}.
+        Thanks, Isaac!
+    \end{cloze}
+     % ==================================================================
+
+    %% CLOZE with MULTI environment ====================================
+    \begin{cloze}{Another Cloze type with in-line MCQ}
+        ``Hello, Goodbye'' was a song by:
+        \begin{shortanswer}[usecase]
+            \item The Beatles
+        \end{shortanswer}.
+        \\
+        They were high on
+        \begin{multi}[horizontal]
+            \item marijuana
+            \item* LSD
+            \item speed
+            \item Molly
+        \end{multi}
+        It was recorded in
+        \begin{shortanswer}[usecase]
+            \item EMI Studio
+        \end{shortanswer}
+        in the city of
+        \begin{multi}[vertical]
+            \item Birmingham
+            \item* London
+            \item Liverpool
+            \item Edinburgh
+        \end{multi}
+    \end{cloze}
+    % ==================================================================
+
+    %% SHORT ANSWER environment ========================================
+    %% Admissible responses: allow for variation in inputs
+    \begin{shortanswer}[usecase]{Short answer}
+        Newton's rival was Gottfried Wilhelm \blank
+        \item[fraction=90] Leibniz
+        \item[fraction=100] Leibniz.
+        \item[fraction=70] leibniz
+        \item[fraction=80] leibniz.
+    \end{shortanswer}
+    % ==================================================================
+
+    %% ESSAY environment ===============================================
+    %% Option response format= html, file or html+file
+    \begin{essay}[response format=html+file]{Essay, Examiner notes}
+        Let $\beta\in(0,1)$ and $\phi := \phi_{t}$. 
+        
+        Prove that this monetary equilibrium $\phi = \beta\phi_{+1}$ 
+        is unique.
+
+        Show here:
+        \item Use contraction mapping
+        \item To show contraction, use Blackwell
+        \item Show solution space is complete ms   
+    \end{essay}
+    % ==================================================================
+
+    %% PYTHON environment ==============================================
+    %% Batch generate many numerical quizzes!
+    \begin{python}
+        for x in range(2,10):
+          for y in range(2,10):
+            if x > y:
+              if x/y == x//y:
+                points=4
+              else:
+                points=3  
+              print(rf"""\begin{{cloze}}[points={points}]{{Arithmetic Quiz {(x,y)}}}
+              Solve the following tasks!\\
+              \begin{{numerical}}
+              ${x} + {y} =$
+              \item {x+y} 
+              \end{{numerical}}\\
+              \begin{{numerical}}
+              ${x} - {y} =$
+              \item {x-y} 
+              \end{{numerical}}\\
+              \begin{{numerical}}
+              ${x} \cdot {y} =$
+              \item {x*y} 
+              \end{{numerical}}\\""")
+              if x/y == x//y:
+                print(rf"""\begin{{numerical}}
+                ${x} : {y} =$
+                \item {x//y} 
+                \end{{numerical}}\\""")
+              print(rf"\end{{cloze}}")
+    \end{python}
+    % ==================================================================
+
+\end{quiz}
+
+%%%%%%%%%%%%%%%%%% FIN %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
