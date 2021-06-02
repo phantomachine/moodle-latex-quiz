@@ -70,7 +70,7 @@
     <text>A Cloze type question</text>
   </name>
   <questiontext format="html">
-    <text><![CDATA[<p>Thanks to calculus, invented by Isaac {1:SHORTANSWER_C:=Newton}, we know that the indefinite integral of \(x^2\) is {1:MULTICHOICE_H:This one \(2x\)~=This one \(3x\)~This one \(0\)} and that \(\int _0^2 x^2 dx\) equals {1:NUMERICAL:=2.667:0.001}. Thanks, Isaac!</p>]]></text>
+    <text><![CDATA[<p>Thanks to calculus, invented by Isaac {1:SHORTANSWER_C:=Newton}, we know that the first derivative of \(x^2\) is {1:MULTICHOICE_H:=This one \(2x\)~This one \(3x\)~This one \(0\)} and that \(\int _0^2 x^2 dx\) equals {1:NUMERICAL:=2.667:0.001}. Thanks, Isaac!</p>]]></text>
   </questiontext>
   <defaultgrade>1</defaultgrade>
   <generalfeedback format="html"><text/></generalfeedback>
@@ -82,7 +82,7 @@
     <text>Another Cloze type with in-line MCQ</text>
   </name>
   <questiontext format="html">
-    <text><![CDATA[<p>&ldquo;Hello, Goodbye&rdquo; was a song by: {1:SHORTANSWER_C:=The Beatles}. <BR/> They were high on {1:MULTICHOICE_H:marijuana~=LSD~speed~Molly} It was recorded in {1:SHORTANSWER_C:=EMI Studio} in the city of {1:MULTICHOICE_V:Birmingham~=London~Liverpool~Edinburgh}</p>]]></text>
+    <text><![CDATA[<p>&ldquo;Hello, Goodbye&rdquo; was a song by: {1:SHORTANSWER_C:=The Beatles}. <BR/> They were sometimes high on {1:MULTICHOICE_H:marijuana~=LSD~speed~Molly} It was recorded in {1:SHORTANSWER_C:=EMI Studios} in the city of {1:MULTICHOICE_V:Birmingham~=London~Liverpool~Edinburgh}</p>]]></text>
   </questiontext>
   <defaultgrade>1</defaultgrade>
   <generalfeedback format="html"><text/></generalfeedback>
@@ -132,9 +132,9 @@
   <attachmentsrequired>0</attachmentsrequired>
   <graderinfo format="html"><text><![CDATA[
     <ul>
-      <li>Use contraction mapping </li>
-      <li>To show contraction, use Blackwell </li>
-      <li>Show solution space is complete ms</li>
+      <li>Examiner note 1 </li>
+      <li>Examiner note 2 </li>
+      <li>Examiner note 3</li>
     </ul>
   ]]></text></graderinfo>
   <responsetemplate format="html"><text/></responsetemplate>
