@@ -161,6 +161,53 @@
     \end{python}
     % ==================================================================
 
+    %% MATCHING environment =====================================
+    \begin{matching}[shuffle=false]{Incomplete markets, HA, Aiyagari}
+        \textbf{Practical (Basic, [10])}
+
+        Consider a mashup of the model of Mark Huggett and Ayse Imhoroglu from our lab session. We use the same notation as in the lectures notes. These are available to you to consult.
+
+        Suppose now there is a government that wishes to finance
+        unemployment benefit transfer $b$ to the unemployed agents. Assume
+        that aggregate labor and capital incomes, respectively $w_{t}N_{t}$ 
+        and $r_{t}K_{t}$, are taxed at a flat rate $\tau$ 
+        to finance the total transfer to all the unemployed. So the government budget constraint would be 
+
+        \[
+          (1-N)b=\tau\left(r_{t}K_{t}+w_{t}N_{t}\right),
+        \]
+
+        where $N$ is the equilibrium ergodic measure of employed agents.
+
+        On the agents' side, the agents' sequential budget constraint would now be
+
+        \[
+            a_{t+1} + c_{t} = (1-\tau)w(r)e_{t} + b(1-e_{t}) + \left[1+(1-\tau)r\right]a_{t},
+        \]
+
+        where $a$ is the agent's asset position, $c$ is consumption and $e\in\{0,1\}$ can take on an unemployment (0) and employment (1) state, according to a Markov chain.
+
+        Recall in this model, the market return $r$ will equal the firm's (net) marginal product of capital.
+
+        The numbered steps below refer to sequentially ordered tasks to be assigned to the computer. Choose the correct task and match to its
+        correct step number.
+
+        %\textbf{Warning:} The answer order below may be randomized by the quiz!
+        \item Step 1: \answer Guess a market return and tax rate.
+        \item Step 2: \answer Solve agents' dynamic program.
+        \item Step 3: \answer Compute distribution of asset claims on capital.
+        \item Step 4: \answer Get implied aggregate capital and labor supply.
+        \item Step 5: \answer Check market clearing and government budget balance.
+        \item Step 6: \answer Update market return and tax rate.
+        \item \answer Compute ergodic unemployment rate.
+        \item \answer Update government spending level.
+        \item \answer Set tax rate to zero.
+        \item \answer Iterate until tax rate maximizes government budget.
+        \item \answer Give a dog a bone.
+        \item \answer Remember to pick up milk.
+        \item \answer Calculate optimal tax and transfer.
+    \end{matching}
+
 \end{quiz}
 
 %%%%%%%%%%%%%%%%%% FIN %%%%%%%%%%%%%%%%%%%%%%%%%%%

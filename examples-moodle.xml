@@ -475,5 +475,72 @@
   <penalty>0.1000000</penalty>
   <hidden>0</hidden>
 </question>
+<question type="matching">
+  <name>
+    <text>Incomplete markets, HA, Aiyagari</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p><B>Practical (Basic, [10])</B> </P><P>Consider a mashup of the model of Mark Huggett and Ayse Imhoroglu from our lab session. We use the same notation as in the lectures notes. These are available to you to consult. </P><P>Suppose now there is a government that wishes to finance unemployment benefit transfer \(b\) to the unemployed agents. Assume that aggregate labor and capital incomes, respectively \(w_{t}N_{t}\) and \(r_{t}K_{t}\), are taxed at a flat rate \(\tau \) to finance the total transfer to all the unemployed. So the government budget constraint would be </P><P>\[ (1-N)b=\tau \left (r_{t}K_{t}+w_{t}N_{t}\right ), \] </P><P>where \(N\) is the equilibrium ergodic measure of employed agents. </P><P>On the agents&rsquo; side, the agents&rsquo; sequential budget constraint would now be </P><P>\[ a_{t+1} + c_{t} = (1-\tau )w(r)e_{t} + b(1-e_{t}) + \left [1+(1-\tau )r\right ]a_{t}, \] </P><P>where \(a\) is the agent&rsquo;s asset position, \(c\) is consumption and \(e\in \{0,1\}\) can take on an unemployment (0) and employment (1) state, according to a Markov chain. </P><P>Recall in this model, the market return \(r\) will equal the firm&rsquo;s (net) marginal product of capital. </P><P>The numbered steps below refer to sequentially ordered tasks to be assigned to the computer. Choose the correct task and match to its correct step number. </P><P></p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>0</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <subquestion format="html">
+    <text><![CDATA[<p>Step 1:</p>]]></text>
+    <answer><text>Guess a market return and tax rate.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Step 2:</p>]]></text>
+    <answer><text>Solve agents' dynamic program.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Step 3:</p>]]></text>
+    <answer><text>Compute distribution of asset claims on capital.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Step 4:</p>]]></text>
+    <answer><text>Get implied aggregate capital and labor supply.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Step 5:</p>]]></text>
+    <answer><text>Check market clearing and government budget balance.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Step 6:</p>]]></text>
+    <answer><text>Update market return and tax rate.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Compute ergodic unemployment rate.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Update government spending level.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Set tax rate to zero.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Iterate until tax rate maximizes government budget.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Give a dog a bone.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Remember to pick up milk.</text></answer>
+  </subquestion>
+  <subquestion format="html">
+    <text></text>
+    <answer><text>Calculate optimal tax and transfer.</text></answer>
+  </subquestion>
+</question>
  
 </quiz>
